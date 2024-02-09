@@ -60,16 +60,9 @@ public class UserService {
     }
 
     //<--Login single user
-    public void logInUser(String email, String password) {
-        Optional<User> userEmailAndPasswordExists = userRepository.findUserByEmailAndPassword(email, password);
-        if (userEmailAndPasswordExists.isPresent()) {
-
-        }
-        throw new IllegalStateException("incorrect email or password");
-    }
-
-    //<--Retrieve a logged in user's details
-    public void getLoggedInUserDetails(String email) {
-
+    public void loginUser(String email, String password) {
+        User user = userRepository.findUserByEmailAndPassword(email, password)
+                .orElseThrow(() -> new IllegalStateException("Email or password not found"));
+        System.out.println(user.getEmail() + " and " + user.getPassword());
     }
 }

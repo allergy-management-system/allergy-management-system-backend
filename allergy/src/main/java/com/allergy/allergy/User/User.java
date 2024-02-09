@@ -14,25 +14,26 @@ public class User {
     @Field
     private String lastName;
     @Field
-    private String email;
+    private String dateOfBirth;
     @Field
     private String gender;
     @Field
-    private String password;
+    private String email;
     @Field
-    private String dateOfBirth;
+    private String password;
+
 
     public User() {
 
     }
 
-    public User(String firstName, String lastName, String email, String gender, String password, String dateOfBirth) {
+    public User(String firstName, String lastName, String dateOfBirth, String gender, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
-        this.gender = gender;
-        this.password = password;
         this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.email = email;
+        this.password = password;
     }
 
     public String getUserId() {
@@ -98,10 +99,10 @@ public class User {
                         "userId='$s', " +
                         "firstName='%s', " +
                         "lastName='%s', " +
+                        "dateOfBirth='%s'",
+                        "gender='%s', " +
                         "email='%s', " +
                         "password='%s', " +
-                        "gender='%s', " +
-                        "dateOfBirth='%s'",
-                userId, firstName, lastName, email, password, gender, dateOfBirth);
+                userId, firstName, lastName, dateOfBirth, gender, email, password );
     }
 }

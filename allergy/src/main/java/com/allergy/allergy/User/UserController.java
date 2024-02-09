@@ -18,8 +18,8 @@ public class UserController {
 
 
     //<--Define the GET endpoint to retrieve all users
-    @GetMapping(path = "/getUsers")
-    public List<User> getUser() {
+    @GetMapping(path = "/getAllUsers")
+    public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 
@@ -32,7 +32,7 @@ public class UserController {
     //<--Login the user into his or her account
     @PostMapping(path = "loginUser")
     public void loginUser(String email, String password) {
-        userService.logInUser(email, password);
+        userService.loginUser(email, password);
     }
 
     //<--Define the DELETE endpoint to delete a user account
