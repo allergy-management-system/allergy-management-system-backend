@@ -44,7 +44,7 @@ public class UserController {
     @DeleteMapping(path = "/deleteAllUsers")
     public void deleteAllUsers() {
         userService.deleteAllUsers();
-    };
+    }
 
     //<--Define the PUT endpoint for updating user details
     @PutMapping(path = "updateUser/{userId}")
