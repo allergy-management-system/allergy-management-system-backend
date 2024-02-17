@@ -1,5 +1,6 @@
-package com.allergy.allergy.User;
+package com.allergy.allergy.User.repository;
 
+import com.allergy.allergy.User.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

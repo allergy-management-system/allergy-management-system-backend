@@ -1,4 +1,4 @@
-package com.allergy.allergy.User;
+package com.allergy.allergy.User.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

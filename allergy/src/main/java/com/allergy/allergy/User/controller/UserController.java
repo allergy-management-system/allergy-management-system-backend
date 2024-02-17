@@ -1,6 +1,8 @@
-package com.allergy.allergy.User;
+package com.allergy.allergy.User.controller;
 
 
+import com.allergy.allergy.User.service.UserService;
+import com.allergy.allergy.User.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,5 +1,7 @@
-package com.allergy.allergy.User;
+package com.allergy.allergy.User.service;
 
+import com.allergy.allergy.User.model.User;
+import com.allergy.allergy.User.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
