@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "graphic-theory-415406",
+  "private_key_id": "88c5750d8934227c357a8dff67df77847df1176c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCgZdEwMQZ7kJPK\nKiPm5/55oXOK4+QbA8vhZNcw07VvdmaQRgtTHiPlj4Iq1cQKM0W6rnaJHEGpPvLW\nrQaaekwDCs3IX5qGnF/1PpcbvuBPzof79GNfbxZV0xf1aNHvCL5WuDyhI8HdRor4\n9dfX+Ze01G5Fq0FPlCSl+GwBFL1debTYmJLnmve/2Xv8Xn9l4qjeZLajZOZkUejh\ntKrcriAAz+NNz9oNfJlVCqMeS7dMrszfLRdWMw6cDydA4vLOWRhPex/RM4GXLvJ3\nIJgmdo6OIwLSKj4mPWBStgSP4c6ocwnpMrgCbz5IO0270MXohTfyJHvx/LkJyOi7\nN8J8aKd3AgMBAAECggEAEHWCOsS9Go7ia3tZhcdGmKqVlan+7Tq9gBp97ne7BX4L\n1kApx1SvcE4CmGypGjbar+ZZKYapwjlAaAEHTXDBPgqsxSPyUl/XhO3wSZuTnvzd\nfWA9ljxq+VGZAsjHyhSGm5V6OzrVGOS1PAjWJkZpZ9fonOOO5yCXhiRwyMedCutZ\npfHeq57YhLdms85IUxhRN0Kg3Ws3rEMEWy/b63Dm8VO5/Z2tpFNRCCheAfxHlrVo\n4czalyot7jz/mnaEq4A8Os6xLBTnpEqhoC7i+d6rAEoh0ZJaXQKQFKbkwugXKuiN\nBenz6zHPyTmAXc2L3ZXmGdMZI9Tnsn24hHNVMQAteQKBgQDQU2EYX9mzSEdIpQI2\n6sw6I0l0OR38ufCVEvXkbgXnQT1BtU/2Qn7tycvxOb5GpCUErI17QJ8GDB1s7LWT\n9qpaM2ALzE66ZOD7SmBb+A9O0Q8XlzyGa76sysLh5eM2T05G3gp1gLLPLqeo9i0S\nwxGNvdRGfehhUHEzGU33BDrV7QKBgQDFGpwQ6fxrC6eKRzh+ybWd1fMYFTt9O5RG\ng7UGo8RqJoSvyBiHQIsJeZrPftOm0/j9tjsZIiYrL/EzcK9JrTQZ7PGfxXij+iU8\nsSqMxzerlXHwpZ+lGZbBkc9f9ZneAr4PWZ01LYEWoYpyb5yOSuFseGhOd1A9Z5jX\nd6opGfMGcwKBgBzbT9nGfSteWbFwWewtffiXprcYqlS1lOOxaqonq12rJccSTG86\nKsbZawyRCRBT8GTDWh22h9CYoQLTjxtd0Z8I+sbnmAgtrRRh6xMSO1yZjNOhuVqN\nVi4tL+2GoICHX7plS2GXYC1esw6uevPcXXQa1WqmSiggsm13ldsflN7JAoGBAI9S\nCAVsfrS/prWvj+7xcPQx7C+o0LcBKZIUlv8a+elN1NGUp/FBB1h+aglS6Ue3fqfN\naC+gWyywEa0b1Pm3zdjEJ/XLOyvQ6l61XIE9IsfLRSx84hbFApACHE5kYdvDFrxG\npz9RtTnlgKwxaB83Z67d5sqXi2r693JFex+j1MjtAoGAKLfX6+xejy4fFOM3swre\nGibjpM3dk45T7qg3IgGKTrFYR5FPbOiCpFN4rsgB8ZqzsWMhJm9ziKayjaFxclMM\nMXQUU/d+BF2GJ/+cs091qABYu3w4Q13xgrfoiCUNumRgpZ9bLZ21NFW3xwJ8omd9\ndkHvH+HKMlGfh5oTuBZy8I4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "allergy-management@graphic-theory-415406.iam.gserviceaccount.com",
+  "client_id": "102516618148650533776",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/allergy-management%40graphic-theory-415406.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
