@@ -18,7 +18,7 @@
 	</properties>
 
 	<dependencies>
-	<!--add the google gemini denpendency-->
+	<!--add the google gemini dependency-->
 		<dependency>
 			<groupId>com.google.cloud</groupId>
 			<artifactId>google-cloud-vertexai</artifactId>
