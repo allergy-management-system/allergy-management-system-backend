@@ -80,152 +80,171 @@ public class AllergyModel {
         return peanuts;
     }
 
-    public void setPeanuts(String peanuts) {
+    public String setPeanuts(String peanuts) {
         this.peanuts = peanuts;
+        return peanuts;
     }
 
     public String getFish() {
         return fish;
     }
 
-    public void setFish(String fish) {
+    public String setFish(String fish) {
         this.fish = fish;
+        return fish;
     }
 
     public String getEggs() {
         return eggs;
     }
 
-    public void setEggs(String eggs) {
+    public String setEggs(String eggs) {
         this.eggs = eggs;
+        return eggs;
     }
 
     public String getButter() {
         return butter;
     }
 
-    public void setButter(String butter) {
+    public String setButter(String butter) {
         this.butter = butter;
+        return butter;
     }
 
     public String getSoyProducts() {
         return soyProducts;
     }
 
-    public void setSoyProducts(String soyProducts) {
+    public String setSoyProducts(String soyProducts) {
         this.soyProducts = soyProducts;
+        return soyProducts;
     }
 
     public String getMilk() {
         return milk;
     }
 
-    public void setMilk(String milk) {
+    public String setMilk(String milk) {
         this.milk = milk;
+        return milk;
     }
 
     public String getOtherNuts() {
         return otherNuts;
     }
 
-    public void setOtherNuts(String otherNuts) {
+    public String setOtherNuts(String otherNuts) {
         this.otherNuts = otherNuts;
+        return otherNuts;
     }
 
     public String getSugar() {
         return sugar;
     }
 
-    public void setSugar(String sugar) {
+    public String setSugar(String sugar) {
         this.sugar = sugar;
+        return sugar;
     }
 
     public String getMushroom() {
         return mushroom;
     }
 
-    public void setMushroom(String mushroom) {
+    public String setMushroom(String mushroom) {
         this.mushroom = mushroom;
+        return mushroom;
     }
 
     public String getGluten() {
         return gluten;
     }
 
-    public void setGluten(String gluten) {
+    public String setGluten(String gluten) {
         this.gluten = gluten;
+        return gluten;
     }
 
     public String getMustard() {
         return mustard;
     }
 
-    public void setMustard(String mustard) {
+    public String setMustard(String mustard) {
         this.mustard = mustard;
+        return mustard;
     }
 
     public String getOther() {
         return other;
     }
 
-    public void setOther(String other) {
+    public String setOther(String other) {
         this.other = other;
+        return other;
     }
 
     public String getOtherFoods() {
         return otherFoods;
     }
 
-    public void setOtherFoods(String otherFoods) {
+    public String setOtherFoods(String otherFoods) {
         this.otherFoods = otherFoods;
+        return otherFoods;
     }
 
     public String getTimesOfReaction() {
         return timesOfReaction;
     }
 
-    public void setTimesOfReaction(String timesOfReaction) {
+    public String setTimesOfReaction(String timesOfReaction) {
         this.timesOfReaction = timesOfReaction;
+        return timesOfReaction;
     }
 
     public String getLastReaction() {
         return lastReaction;
     }
 
-    public void setLastReaction(String lastReaction) {
+    public String setLastReaction(String lastReaction) {
         this.lastReaction = lastReaction;
+        return lastReaction;
     }
 
     public String getCauseOfReaction() {
         return causeOfReaction;
     }
 
-    public void setCauseOfReaction(String causeOfReaction) {
+    public String setCauseOfReaction(String causeOfReaction) {
         this.causeOfReaction = causeOfReaction;
+        return causeOfReaction;
     }
 
     public String getSymptomsExperienced() {
         return symptomsExperienced;
     }
 
-    public void setSymptomsExperienced(String symptomsExperienced) {
+    public String setSymptomsExperienced(String symptomsExperienced) {
         this.symptomsExperienced = symptomsExperienced;
+        return symptomsExperienced;
     }
 
     public String getMedicationAllergy() {
         return medicationAllergy;
     }
 
-    public void setMedicationAllergy(String medicationAllergy) {
+    public String setMedicationAllergy(String medicationAllergy) {
         this.medicationAllergy = medicationAllergy;
+        return medicationAllergy;
     }
 
     public String getAdditionalNotes() {
         return additionalNotes;
     }
 
-    public void setAdditionalNotes(String additionalNotes) {
+    public String setAdditionalNotes(String additionalNotes) {
         this.additionalNotes = additionalNotes;
+        return additionalNotes;
     }
 
     @Override
