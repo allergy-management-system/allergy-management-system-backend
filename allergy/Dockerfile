@@ -11,6 +11,6 @@ ENTRYPOINT ["java", "-jar", "allergy.jar"]
 #use the -v flag to mount the host directory with the key file to the container's /secrets/google directory
 #set the gcloud Environment Variable
 VOLUME /secrets/google
-RUN -v /allergy-management-system-backend/graphic-theory-415406-88c5750d8934.json:/secrets/google gcloudservicekey
+docker run -v /allergy-management-system-backend/graphic-theory-415406-88c5750d8934.json:/secrets/google gcloudservicekey
 ENV GOOGLE_APPLICATION_CREDENTIALS=/secrets/google/graphic-theory-415406-88c5750d8934.json
 
