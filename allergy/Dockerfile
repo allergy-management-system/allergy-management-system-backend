@@ -7,4 +7,12 @@ COPY --from=BUILD /target/allergy-0.0.1-SNAPSHOT.jar allergy.jar
 EXPOSE 8081
 ENTRYPOINT ["java", "-jar", "allergy.jar"]
 
+#Let's work on the gcloud file credentials environment:
+# Set the working directory
+WORKDIR /app
 
+# Copy the service account key file into the Docker image
+COPY allergy-management-system-backend/allergy/graphic-theory-415406-88c5750d8934.json /app/service-account-key.json
+
+# Set the environment variable
+ENV GOOGLE_APPLICATION_CREDENTIALS=/app/service-account-key.json
