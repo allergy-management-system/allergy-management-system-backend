@@ -12,7 +12,7 @@ ENTRYPOINT ["java", "-jar", "allergy.jar"]
 WORKDIR /app
 
 # Copy the service account key file into the Docker image
-COPY allergy-management-system-backend/allergy/allergy-management-service-8d8002cbf7fe.json /app/service-account-key.json
+COPY allergy-management-service-8d8002cbf7fe.json /app/service-account-key.json
 
 # Set the environment variable
 ENV GOOGLE_APPLICATION_CREDENTIALS=/app/service-account-key.json
