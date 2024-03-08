@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "allergy-management-service",
+  "private_key_id": "45960639a098356c33b99c0a66eccb50fa13bc53",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqwxxEEHK7Q/6Z\nrtkcj6+Snd4VT7vXoBMX5usf+pCq8lATmh2lF8uFgRUeq85RykjUfqDUjq0y3mDv\nIky4mocKEyPhTIoX/8VFfsZ/txDGLwaJNk47JUXborUqF3x6uWqGBPGReLHyt/H8\n3sMjA1ubqniW2eIN/hfizRwVAx8lH6yvPpQRzfokHei50dp1o0e23batM2jG4nvC\ndTDyHWvbpjaZPC90gxq9a+DF5ElpPrw7uC75ycZqLrku7HwXyJeGHIJFyjONZYtX\nyCkbGiiW4Ecy++HT53LrIq+xjeqOGWHJgtRPVjwf6rhzU4JR6Kw9igmm9j948FV9\nfAPRXYETAgMBAAECggEALZ6ve/2a8S2ipKMiLK+0W6qiTLY+/EWvJCkUcrgpkwnm\nW75GIjd/r1yDbGzA03gDygVEaVTur5LaebiDn6Pk5MulP8kHcY7qwHy0giVBrXid\nueWQs9tq1NkcpjCdGFpVu5Uxhkgk3i/HTeOjZUS94hICYma2Lj/OWNCsKm7pkKx8\nEKXu5okurLPSS4EcrqrpNANw8vdo84ad6NSmdE+aKeeUQRBdTDKDwPMjaOZKual7\nf0PAyl0cIfeXo033/xmVNzhM4t8EHlWoTHVcZDamsZ3h8tysul94ZBJIoEZhICH+\nHg1yBUXkLyLyDbgZGW70GgDyNaOTUfMuL9Xjxj5rBQKBgQDiSPmP7GwezFCa62eN\nkP2By8ZLBHADT5jVb6RO9RzFVDmiivEIZv7vLPYu0Nol+cRr5OYR6sb62hxDjWbM\nyjNI6eBAUmoRZGnpk7av0DEEfo0gW0o0fyrGQqE4Kx7KujSooX6VQBUSE9TPaCsI\nqmogAyfXfszeydL1Qb00+q6LfQKBgQDBL58zYZIAkigD/CyrC0TQDzYzBFqtuAmy\nQ0AiI/uIik7uVYF1bib+3fKjPXiupatSmhNrZDYwjziEhGFLezVXfQhuJh0LAHo4\n/nqLvmtxCzzLZ1OFU3KKLEHaciHQlEQyo1zFXKWzvLfmGE7SmoCb36ga+Sn/6zV/\n1IRDEe1DzwKBgCB9nee+aJ/bck9sMYgwI1Y5rhUjY/n1udobl5oGs8TZnRTrokQ0\nlbI94HNEZa5COKPNUAOOlFd8bcZ9TR9mgQqdGifiLXyl0FdLcFW6LO+aRCU7NmJn\nR/sDoiZwepFdPyZfWc+QTfY0hr/pExTBc095ZIUancv3aqTwdXxf6iP5AoGBAIge\nJt1MNVSDpwBP0aVfFkhHP5gozD+0+dgJ/IlRsyycz0qtIr98MqvH9OvCJ2NfRdy4\nxVAY1vnWICt3HxrRIF+ZsLPz1OjomDXKUMxgClInadmj3zyE9KKY1nm1i0/s+DR5\n2KcTRYnkQes1W2yXAmFR8J+4yjgRIawFMIAVhIkPAoGBAK1Z43KBX8Ef48oix5x2\npyNydKU1de5v9DNzXoKTypWeb+dNiiiOa2rNDus6jIll35cZI07rV7hwi5Mwa+Wj\nRYjQ5/Xrpx2dk9o35ZokUWrk2aWIaiHdBHUeb3NYwuSKjyN09iEpxuoVhlX9oIIQ\nBWD4h+qdMLZPjnfLJ76y4rK9\n-----END PRIVATE KEY-----\n",
+  "client_email": "setsofia-kojo-allergy-service@allergy-management-service.iam.gserviceaccount.com",
+  "client_id": "103061582168280462193",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/setsofia-kojo-allergy-service%40allergy-management-service.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
