@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "allergy-management-service",
+  "private_key_id": "fa1e42285d7c8806c656433b694e61e10a32cc7f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCmu0PJzzJNMNlV\n0I+Cx+pMV0guad6yrSDEFFXYCiJzAAac8iiH55OQQxZqv5qbz6aDkccm39BgHuvl\nYVrXHufDzaxuApluCKLWe/hUsIhM0jZgNUix0ePTzX+8jAX1FaJXQ9TUXv4hQsHk\nMFoAT31kQrbQyDUzrn2pe7uPxeRI7rtoc3dl/DHFsS10H78+NLeWqsK6/qF/ia9I\nsldL5fSpCv8RsE+GLRoOUA9QKjf7N2PSSqLf4jnacECgno3qJmQbG8+QP66xOsV2\nc1lh1Vk3sxzs3/uUTPEi8rkid+KakDxZmZ0FGjWi19lrNMiddR0zwvBa8AGT2jxF\n8sFTTwzRAgMBAAECggEASF7HVU0MsemupGuDJ0qcHefSymakxdyU+Nc0zbHUcyND\nO5N22UrAx+D+1XX2Z4Qx7DD2Bx8l5Nr3HJjt46skAV8AZb3WGCdCeyPTTftUJjgm\nZwsp0xleMRylQdNrcI6j6Qnl0wqqdwhxfZkpL7JRJJg6nxQP1695FvxAlO7aIHdf\n4e99D5WmAqfT3gIPmIRrtFEnSymXVF5cGzZw8mAnoXLcdhrnZyfZTGT5ksC4ME2K\n4jclXSzvY3aCKePqp/He9HInAw9xxDK6GJYFy5THRphbO4xgCT7MQmllIjDhzNgX\nuEeyozkBCSkAzR5OCjcKcD3/UaKrgQRSsuZ6uzS48wKBgQDO3KZd8VihaANw1tCr\nJxC/GvTeQmsQpl3q9m8SpEC3KtxwIPSEAu8GmIzXyn0wdjEjRlSahY0ks9BWXgTb\nKQw9j2nzCZNkbHLA0fIg6AmsT2c1N4315iaFSJSfJC6sfrshNGEEsXiy/JGde44s\nZUhmG5wnMZx+BE/MTBOBeiqKcwKBgQDOVkUK9P6os7Iml6GGbANi8YNmjunyNnBC\n2yWeTttifieqaUNY/IUbuUXyO+/lIy1KJY6klCQ4Vtk+ijwHMkqN8gMMqDyJqc7e\nVYQzUXW5UrnjQSRvasOyydo2Dpe4xdJ20qqRanhQQZSNItxUlsQflnZjlH/kmDH4\ny7C3kuqmqwKBgHioNtnAtiOfGbKteZT6+kedn4osT2qsv0cXan4DFERCWcWFU1nU\npDrCrBQJ5a9ooQykLyDaGRN5VmGqAUcb0CnwBqpdwXznzJ8vVf1fmpTI07g0qTbu\ngTVouleAsUCnwtqBRL2KDo7Hxt+Ge8zlXq9AF3q88zyFo03UaeQxr7KFAoGAWLgJ\nWcu7z6fsOuHJxvWcgyebOzbJ6qZzoJt/0lDPzcq2nXRDS/jP9vqz05Ln9Fsqtw3t\nBmDYLg1Rva1MYD/EhMIBg6i21u5Xj4uvmy00dCnY2ZkB5JJAcRiPpdyiagVNGGA+\njOX9s2xvRjwuBoUI8RgN8YVBdHXoTrSuWFBoap8CgYEAkD8y8UmRlxqQKVvZlA/b\n2o2uc90zYYhS6shQBIW2dvs53dcg+gqqwZyxt9zO2vJ9BBAc4T+tD47XNgWjjQT5\n2cKu1VjOIEkK5eg/CAt+lZagrkpRFE1eqrMpeGvdhEMiuQkDSBk9GmavUk14O8T3\nebsZRH6+zH1SVcEp2OxjnQI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "allergy-service-account@allergy-management-service.iam.gserviceaccount.com",
+  "client_id": "114488712957663723664",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/allergy-service-account%40allergy-management-service.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
