@@ -8,7 +8,7 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-slim
 WORKDIR /app
 COPY --from=BUILD /app/target/allergy-0.0.1-SNAPSHOT.jar allergy.jar
-COPY .env /app/service-account-key.json
+COPY service.json /app/service-account-key.json
 ENV GOOGLE_APPLICATION_CREDENTIALS=/app/service-account-key.json
 EXPOSE 8081
 ENTRYPOINT ["java", "-jar", "allergy.jar"]
