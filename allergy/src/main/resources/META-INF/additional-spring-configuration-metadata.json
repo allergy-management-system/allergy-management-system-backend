@@ -1,8 +1,0 @@
-{
-  "properties": [
-    {
-      "name": "vertexai.api.key",
-      "type": "java.lang.String",
-      "description": "Description for vertexai.api.key."
-  }
-] }

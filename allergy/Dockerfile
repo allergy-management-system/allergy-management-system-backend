@@ -9,6 +9,6 @@ FROM openjdk:17.0.1-slim
 WORKDIR /app
 COPY --from=BUILD /app/target/allergy-0.0.1-SNAPSHOT.jar allergy.jar
 #COPY service.json /app/service-account-key.json
-#ENV GOOGLE_APPLICATION_CREDENTIALS=/app/service-account-key.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=allergy/service.json
 EXPOSE 8081
 ENTRYPOINT ["java", "-jar", "allergy.jar"]
