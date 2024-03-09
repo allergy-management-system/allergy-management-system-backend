@@ -32,7 +32,7 @@ public class AllergyApplication implements CommandLineRunner {
 	public void run(String... args) {}
 
 	private static Credentials loadCredentials() throws IOException {
-		FileInputStream serviceAccountStream = new FileInputStream("allergy/src/main/java/com/allergy/allergy/service.json");
+		FileInputStream serviceAccountStream = new FileInputStream("service.json");
 		return GoogleCredentials.fromStream(serviceAccountStream)
 				.createScoped(/* list of desired scopes */);
 	}
