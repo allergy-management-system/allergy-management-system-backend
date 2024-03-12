@@ -1,7 +1,6 @@
 package com.allergy.allergy.AllergyRecommendationSection.controllers;
 
-import com.allergy.allergy.AllergyRecommendationSection.aiResponseInstruction.AiResponseInstruction;
-import com.allergy.allergy.AllergyRecommendationSection.model.AllergyModel;
+import com.allergy.allergy.AllergyRecommendationSection.model.Allergy;
 import com.allergy.allergy.AllergyRecommendationSection.service.AllergyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +19,8 @@ public class AllergyController {
     }
 
     @PostMapping("/chat")
-    public String ChatDiscussion(
+    public String[] ChatDiscussion(
+            @RequestParam String userId,
             String peanuts,
             String fish,
             String eggs,
@@ -41,7 +41,7 @@ public class AllergyController {
             String additionalNotes
     ) throws IOException {
         //Initialize the allergy model:
-        AllergyModel allergyModel = new AllergyModel();
+        Allergy allergyModel = new Allergy();
         String message =
                 "Hi Gemini, I need your advice on allergy: Here are the that rules I want you to follow before giving an answer. " +
                 "Rule 1. UserInput: " +
@@ -76,6 +76,12 @@ public class AllergyController {
                 "2. Go ahead to recommend internationally accepted allergy management medical prescriptions to solve my allergy. " +
                 "3. And advice me to seek medical attention if the prescriptions or home remedies did not work for me";
 
-        return allergyService.allergyAiChatResponse(message);
+        return allergyService.allergyAiChatResponse(userId, message.trim());
+    }
+
+    //The allergy history endpoint
+    @PostMapping("/history")
+    public Object[] AllergyHistory(@RequestParam String userId) {
+        return allergyService.allergyHistory(userId);
     }
 }

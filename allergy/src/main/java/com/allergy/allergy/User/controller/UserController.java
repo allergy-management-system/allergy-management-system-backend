@@ -29,16 +29,14 @@ public class UserController {
 
     //<--Define the POST endpoint to ADD a new user
     @PostMapping("/addNewUser")
-    public ResponseEntity<String> registerNewUser(@RequestBody User user) {
-        String userId = userService.registerNewUser(user);
-        return ResponseEntity.status(HttpStatus.OK).body("User ID: " + userId);
+    public Object registerNewUser(@RequestBody User user) {
+        return userService.registerNewUser(user);
     }
 
     //<--Login the user into his or her account
     @PostMapping(path = "loginUser")
-    public ResponseEntity<String> loginUser(String email, String password) {
-        String userId = userService.loginUser(email, password);
-        return ResponseEntity.status(HttpStatus.OK).body("User ID: " + userId);
+    public Object loginUser(String email, String password) {
+        return userService.loginUser(email, password);
     }
 
     //<--Define the DELETE endpoint to delete a user account

@@ -1,13 +1,21 @@
 package com.allergy.allergy.AllergyRecommendationSection.model;
 
+import com.google.api.client.util.DateTime;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 @Document
-public class AllergyModel {
+public class Allergy {
     @Id
     private String allergyId;
+    @Field
+    private String userId;
+    @Field
+    private String date = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
     @Field
     private String peanuts;
     @Field
@@ -46,13 +54,17 @@ public class AllergyModel {
     private String medicationAllergy;
     @Field
     private String additionalNotes;
+    @Field
+    private String message;
+    @Field
+    private String response;
 
-    public AllergyModel () {
+    public Allergy () {    }
 
-    }
-
-    public AllergyModel(String peanuts, String fish, String eggs, String butter, String soyProducts, String milk, String otherNuts, String sugar, String mushroom, String gluten, String mustard, String other, String otherFoods, String timesOfReaction, String lastReaction, String causeOfReaction, String symptomsExperienced, String medicationAllergy, String additionalNotes) {
+    public Allergy(String userId, String peanuts, String date, String fish, String eggs, String butter, String soyProducts, String milk, String otherNuts, String sugar, String mushroom, String gluten, String mustard, String other, String otherFoods, String timesOfReaction, String lastReaction, String causeOfReaction, String symptomsExperienced, String medicationAllergy, String additionalNotes, String message, String response) {
         //The foods that can cause allergy
+        this.userId = userId;
+        this.date = date;
         this.peanuts = peanuts;
         this.fish = fish;
         this.eggs = eggs;
@@ -74,6 +86,34 @@ public class AllergyModel {
         this.symptomsExperienced = symptomsExperienced; // Cause of the allergy: 1. Eating the food 2. Touching the food 3. Smelling the food 4. If not specify
         this.medicationAllergy = medicationAllergy; //Have you had any allergy medication: Yes or No
         this.additionalNotes = additionalNotes; // Other things you want to add
+
+        //The fully compiled message
+        this.message = message;
+        this.response = response;
+    }
+
+    public String getAllergyId() {
+        return allergyId;
+    }
+
+    public void setAllergyId(String allergyId) {
+        this.allergyId = allergyId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getPeanuts() {
@@ -247,10 +287,28 @@ public class AllergyModel {
         return additionalNotes;
     }
 
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getResponse() {
+        return response;
+    }
+
+    public void setResponse(String response) {
+        this.response = response;
+    }
+
     @Override
     public String toString() {
         return "FormFields{" +
-                "peanuts='" + peanuts + '\'' +
+                "userId='" + userId + '\'' +
+                ", date='" + date + '\'' +
+                ", peanuts='" + peanuts + '\'' +
                 ", fish='" + fish + '\'' +
                 ", eggs='" + eggs + '\'' +
                 ", butter='" + butter + '\'' +
@@ -269,6 +327,8 @@ public class AllergyModel {
                 ", symptomsExperienced='" + symptomsExperienced + '\'' +
                 ", medicationAllergy='" + medicationAllergy + '\'' +
                 ", additionalNotes='" + additionalNotes + '\'' +
+                ", message='" + message + '\'' +
+                ", response='" + response + '\'' +
                 '}';
     }
 }

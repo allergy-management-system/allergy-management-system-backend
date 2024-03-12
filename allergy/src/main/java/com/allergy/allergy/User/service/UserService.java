@@ -28,7 +28,7 @@ public class UserService {
 
     //<--Register a new user...
     //<--Write a condition to check if the user email is already existing in the database
-    public String registerNewUser(User user) {
+    public Object registerNewUser(User user) {
         Optional<User> existingUser = userRepository.findUserByEmail(user.getEmail());
         if (existingUser.isPresent()) {
             throw new IllegalStateException("User " + user.getEmail() + " already exists.");
@@ -39,7 +39,7 @@ public class UserService {
     }
 
     //<--Login single user
-    public String loginUser(String email, String password) {
+    public Object loginUser(String email, String password) {
         User user = userRepository.findUserByEmailAndPassword(email, password)
                 .orElseThrow(() -> new IllegalStateException("Email or password not found"));
         System.out.println(user.getEmail() + " and " + user.getPassword());
