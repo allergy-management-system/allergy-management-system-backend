@@ -29,13 +29,13 @@ public class UserController {
 
     //<--Define the POST endpoint to ADD a new user
     @PostMapping("/addNewUser")
-    public Object registerNewUser(@RequestBody User user) {
+    public ResponseEntity<User> registerNewUser(@RequestBody User user) {
         return userService.registerNewUser(user);
     }
 
     //<--Login the user into his or her account
     @PostMapping(path = "loginUser")
-    public Object loginUser(String email, String password) {
+    public ResponseEntity<User> loginUser(String email, String password) {
         return userService.loginUser(email, password);
     }
 

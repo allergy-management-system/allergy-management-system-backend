@@ -39,11 +39,11 @@ public class UserService {
     }
 
     //<--Login single user
-    public Object loginUser(String email, String password) {
+    public ResponseEntity<User> loginUser(String email, String password) {
         User user = userRepository.findUserByEmailAndPassword(email, password)
                 .orElseThrow(() -> new IllegalStateException("Email or password not found"));
         System.out.println(user.getEmail() + " and " + user.getPassword());
-        return user.getUserId();
+        return ResponseEntity.ok(user);
     }
 
     //<--Delete user
