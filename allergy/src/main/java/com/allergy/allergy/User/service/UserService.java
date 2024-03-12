@@ -28,13 +28,13 @@ public class UserService {
 
     //<--Register a new user...
     //<--Write a condition to check if the user email is already existing in the database
-    public Object registerNewUser(User user) {
+    public ResponseEntity<User> registerNewUser(User user) {
         Optional<User> existingUser = userRepository.findUserByEmail(user.getEmail());
         if (existingUser.isPresent()) {
             throw new IllegalStateException("User " + user.getEmail() + " already exists.");
         } else {
             User newUser = userRepository.save(user);
-            return newUser.getUserId();
+            return ResponseEntity.ok(newUser);
         }
     }
 
