@@ -21,29 +21,29 @@ public class AllergyController {
 
     @PostMapping("/chat")
     public String ChatDiscussion(
-            @RequestParam String peanuts,
-            @RequestParam String fish,
-            @RequestParam String eggs,
-            @RequestParam String butter,
-            @RequestParam String soyProducts,
-            @RequestParam String milk,
-            @RequestParam String otherNuts,
-            @RequestParam String sugar,
-            @RequestParam String mushrooms,
-            @RequestParam String gluten,
-            @RequestParam String mustard,
-            @RequestParam String otherFoods,
-            @RequestParam String timesOfReaction,
-            @RequestParam String lastReaction,
-            @RequestParam String causeOfReaction,
-            @RequestParam String symptomExperienced,
-            @RequestParam String medicationAllergy,
-            @RequestParam String additionalNotes
+            String peanuts,
+            String fish,
+            String eggs,
+            String butter,
+            String soyProducts,
+            String milk,
+            String otherNuts,
+            String sugar,
+            String mushrooms,
+            String gluten,
+            String mustard,
+            String otherFoods,
+            String timesOfReaction,
+            String lastReaction,
+            String causeOfReaction,
+            String symptomExperienced,
+            String medicationAllergy,
+            String additionalNotes
     ) throws IOException {
         //Initialize the allergy model:
         AllergyModel allergyModel = new AllergyModel();
         String message =
-                "Hi Gemini, I need your advice on allergy: Here are few rules I want you to follow before giving an answer. " +
+                "Hi Gemini, I need your advice on allergy: Here are the that rules I want you to follow before giving an answer. " +
                 "Rule 1. UserInput: " +
                 "I have allergies to " +
                         allergyModel.setPeanuts(peanuts) + " " +

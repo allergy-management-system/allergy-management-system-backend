@@ -4,6 +4,8 @@ package com.allergy.allergy.User.controller;
 import com.allergy.allergy.User.service.UserService;
 import com.allergy.allergy.User.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,14 +29,16 @@ public class UserController {
 
     //<--Define the POST endpoint to ADD a new user
     @PostMapping("/addNewUser")
-    public void registerNewUser( @RequestBody User user ) {
-        userService.registerNewUser(user);
+    public ResponseEntity<String> registerNewUser(@RequestBody User user) {
+        String userId = userService.registerNewUser(user);
+        return ResponseEntity.status(HttpStatus.OK).body("User ID: " + userId);
     }
 
     //<--Login the user into his or her account
     @PostMapping(path = "loginUser")
-    public void loginUser(String email, String password) {
-        userService.loginUser(email, password);
+    public ResponseEntity<String> loginUser(String email, String password) {
+        String userId = userService.loginUser(email, password);
+        return ResponseEntity.status(HttpStatus.OK).body("User ID: " + userId);
     }
 
     //<--Define the DELETE endpoint to delete a user account

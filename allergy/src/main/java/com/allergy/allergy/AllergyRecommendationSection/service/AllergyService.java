@@ -20,14 +20,6 @@ public class AllergyService {
     public String allergyAiChatResponse(String message) throws IOException {
         AllergyConstants constants = new AllergyConstants();
 
-        //set the  google credentials
-        //String googleCredentialsString = constants.getCredentials();
-
-        //create google credentials from the credential string
-//        GoogleCredentials googleCredentials = GoogleCredentials.fromStream(
-//                new FileInputStream("allergy/service.json")
-//        );
-
         VertexAI vertexAI = new VertexAI(constants.getProjectId(), constants.getProjectLocation(), constants.getKey()); // Pass API key
         GenerativeModel generativeModel = new GenerativeModel(constants.getModelName(), vertexAI);
         ChatSession chatSession = new ChatSession(generativeModel);

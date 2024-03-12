@@ -3,6 +3,8 @@ package com.allergy.allergy.User.service;
 import com.allergy.allergy.User.model.User;
 import com.allergy.allergy.User.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,15 +22,28 @@ public class UserService {
 
     //<--Get all the users from the database...
     public List<User> getAllUsers() {
+        System.out.println(userRepository.findAll());
         return userRepository.findAll();
     }
 
     //<--Register a new user...
     //<--Write a condition to check if the user email is already existing in the database
-    public void registerNewUser(User user) {
-        Optional<User> existingUser = userRepository.findUserByEmail( user.getEmail() );
-        if (existingUser.isPresent()) throw new IllegalStateException("User " + user.getEmail() + "already exists.");
-        userRepository.save(user);
+    public String registerNewUser(User user) {
+        Optional<User> existingUser = userRepository.findUserByEmail(user.getEmail());
+        if (existingUser.isPresent()) {
+            throw new IllegalStateException("User " + user.getEmail() + " already exists.");
+        } else {
+            User newUser = userRepository.save(user);
+            return newUser.getUserId();
+        }
+    }
+
+    //<--Login single user
+    public String loginUser(String email, String password) {
+        User user = userRepository.findUserByEmailAndPassword(email, password)
+                .orElseThrow(() -> new IllegalStateException("Email or password not found"));
+        System.out.println(user.getEmail() + " and " + user.getPassword());
+        return user.getUserId();
     }
 
     //<--Delete user
@@ -61,10 +76,4 @@ public class UserService {
         userRepository.deleteAll(user);
     }
 
-    //<--Login single user
-    public void loginUser(String email, String password) {
-        User user = userRepository.findUserByEmailAndPassword(email, password)
-                .orElseThrow(() -> new IllegalStateException("Email or password not found"));
-        System.out.println(user.getEmail() + " and " + user.getPassword());
-    }
 }
