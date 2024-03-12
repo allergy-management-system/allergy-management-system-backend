@@ -1,5 +1,6 @@
 package com.allergy.allergy.AllergyRecommendationSection.controllers;
 
+import com.allergy.allergy.AllergyRecommendationSection.aiResponseInstruction.AiResponseInstruction;
 import com.allergy.allergy.AllergyRecommendationSection.model.Allergy;
 import com.allergy.allergy.AllergyRecommendationSection.service.AllergyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,10 +43,9 @@ public class AllergyController {
     ) throws IOException {
         //Initialize the allergy model:
         Allergy allergyModel = new Allergy();
+        AiResponseInstruction aiResponseInstruction = new AiResponseInstruction();
         String message =
-                "Hi Gemini, I need your advice on allergy: Here are the that rules I want you to follow before giving an answer. " +
-                "Rule 1. UserInput: " +
-                "I have allergies to " +
+                aiResponseInstruction.getStartInstructions() +
                         allergyModel.setPeanuts(peanuts) + " " +
                         allergyModel.setEggs(eggs) + " " +
                         allergyModel.setFish(fish) + " " +
@@ -69,12 +69,8 @@ public class AllergyController {
                 "I also have allergies to " +
                         allergyModel.setMedicationAllergy(medicationAllergy) + " " +
                 "in addition, " +
-                        allergyModel.setAdditionalNotes(additionalNotes) + " " +
-                "Please advise on managing these allergies according to the instructions provided.. " +
-                "Your response should follow this format: " +
-                "1. Give me immediate home procedures to follow in order to manage the allergy'. " +
-                "2. Go ahead to recommend internationally accepted allergy management medical prescriptions to solve my allergy. " +
-                "3. And advice me to seek medical attention if the prescriptions or home remedies did not work for me";
+                        allergyModel.setAdditionalNotes(additionalNotes) +
+                aiResponseInstruction.getEndInstructions();
 
         return allergyService.allergyAiChatResponse(userId, message.trim());
     }
