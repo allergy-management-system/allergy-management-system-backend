@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,16 +23,15 @@ public class AllergyService {
 
     //Initialize the allergy repository and autowire it with the Allergy Service constructor
     private final AllergyRepository allergyRepository;
-    private final UserRepository userRepository;
+
 
     @Autowired
     public AllergyService(AllergyRepository allergyRepository, UserRepository userRepository) {
         this.allergyRepository = allergyRepository;
-        this.userRepository = userRepository;
     }
 
 
-    public String[] allergyAiChatResponse(String userId, String message) throws IOException {
+    public Object allergyAiChatResponse(String userId, String message) throws IOException {
         AllergyConstants constants = new AllergyConstants();
 
         VertexAI vertexAI = new VertexAI(constants.getProjectId(), constants.getProjectLocation(), constants.getKey()); // Pass API key
@@ -47,35 +47,12 @@ public class AllergyService {
         allergyModel.setResponse(response);
 
         //Save the userId and message into the database/repository
-        Allergy allergy = allergyRepository.save(allergyModel);
-        return allergyInformation(allergy.getAllergyId(), allergy.getUserId());
-    }
-
-    //Return the saved allergy info
-
-    public String[] allergyInformation(String allergyId, String userId) {
-        Optional<Allergy> isAllergyExists = allergyRepository.findById(allergyId);
-        Optional<User> isUserExists = userRepository.findById(userId);
-
-        if (isAllergyExists.isEmpty() && isUserExists.isEmpty()) {
-            throw new IllegalStateException("allergy does not exist");
-        } else {
-            Allergy allergy = isAllergyExists.get();
-            User user = isUserExists.get();
-            String[] allergyData = new String[3];
-
-            // allergyData[0] = allergy.getAllergyId();
-            allergyData[0] = user.getUserId();
-            allergyData[1] = allergy.getDate();
-            allergyData[2] = allergy.getResponse();
-            return allergyData;
-        }
+        return allergyRepository.save(allergyModel);
     }
 
     //The allergy history
     public Object[] allergyHistory(String userId) {
         List<Allergy> allergyList = allergyRepository.findAllByUserId(userId);
-
         if (allergyList.isEmpty()) {
             throw new IllegalStateException("User id not found");
         } else {

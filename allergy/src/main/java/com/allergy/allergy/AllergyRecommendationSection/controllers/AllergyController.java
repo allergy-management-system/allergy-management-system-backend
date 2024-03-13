@@ -20,7 +20,7 @@ public class AllergyController {
     }
 
     @PostMapping("/chat")
-    public String[] ChatDiscussion(
+    public Object ChatDiscussion(
             @RequestParam String userId,
             String peanuts,
             String fish,
