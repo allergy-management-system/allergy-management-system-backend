@@ -3,7 +3,6 @@ package com.allergy.allergy.AllergyRecommendationSection.service;
 import com.allergy.allergy.AllergyRecommendationSection.constants.AllergyConstants;
 import com.allergy.allergy.AllergyRecommendationSection.model.Allergy;
 import com.allergy.allergy.AllergyRecommendationSection.repository.AllergyRepository;
-import com.allergy.allergy.User.model.User;
 import com.allergy.allergy.User.repository.UserRepository;
 import com.google.cloud.vertexai.VertexAI;
 import com.google.cloud.vertexai.api.GenerateContentResponse;
@@ -13,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -47,7 +45,9 @@ public class AllergyService {
         allergyModel.setResponse(response);
 
         //Save the userId and message into the database/repository
-        return allergyRepository.save(allergyModel);
+        Object result = allergyRepository.save(allergyModel);
+        System.out.println("The result " + result);
+        return result;
     }
 
     //The allergy history
@@ -56,7 +56,20 @@ public class AllergyService {
         if (allergyList.isEmpty()) {
             throw new IllegalStateException("User id not found");
         } else {
+            System.out.println(Arrays.toString(allergyList.toArray()));
             return allergyList.toArray();
+        }
+    }
+
+    //Delete allergy
+    public void deleteAllergy(String allergyId) {
+        Optional<Allergy> allergyOptional = allergyRepository.findById(allergyId);
+        if (allergyOptional.isPresent()) {
+            Allergy allergy = allergyOptional.get();
+            allergyRepository.delete(allergy);
+            return;
+        } else {
+            throw new IllegalStateException("Allergy does not exist");
         }
     }
 }

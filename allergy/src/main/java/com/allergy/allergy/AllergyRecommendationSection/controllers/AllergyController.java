@@ -80,4 +80,10 @@ public class AllergyController {
     public Object[] AllergyHistory(@RequestParam String userId) {
         return allergyService.allergyHistory(userId);
     }
+
+    //Delete allergy from database
+    @PostMapping("/delete")
+    public void DeleteAllergy(@RequestParam String allergyId) {
+        allergyService.deleteAllergy(allergyId);
+    }
 }

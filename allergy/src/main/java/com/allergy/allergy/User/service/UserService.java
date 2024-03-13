@@ -1,5 +1,6 @@
 package com.allergy.allergy.User.service;
 
+import com.allergy.allergy.ChatAi.CacheData;
 import com.allergy.allergy.User.model.User;
 import com.allergy.allergy.User.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,15 +35,31 @@ public class UserService {
             throw new IllegalStateException("User " + user.getEmail() + " already exists.");
         } else {
             User newUser = userRepository.save(user);
+            System.out.println("The cached user id: " + CacheData.getFromCache("userId"));
             return ResponseEntity.ok(newUser);
         }
     }
 
     //<--Login single user
+
+
     public ResponseEntity<User> loginUser(String email, String password) {
         User user = userRepository.findUserByEmailAndPassword(email, password)
                 .orElseThrow(() -> new IllegalStateException("Email or password not found"));
         System.out.println(user.getEmail() + " and " + user.getPassword());
+
+        System.out.println(user.getUserId());
+
+        //Implement the caching
+        Object cacheData = CacheData.getFromCache("userId");
+        if (cacheData == null) {
+            cacheData = user.getUserId();
+            CacheData.putInCache("userId", cacheData);
+
+            //Print the cached data
+            System.out.println("The cached user id: " + CacheData.getFromCache("userId"));
+        }
+
         return ResponseEntity.ok(user);
     }
 
